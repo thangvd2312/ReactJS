@@ -29,7 +29,6 @@ class App extends Component {
     });
   };
   render() {
-    // console.log("render from AppJS");
     const { monters, searchField } = this.state;
     const { onSearchChange } = this;
     const filteredMonsters = monters.filter((monter) => {
@@ -37,6 +36,7 @@ class App extends Component {
     });
     return (
       <div className="App">
+        <h1 className="app-title">Monsters Rolodex</h1>
         <SearchBoxComponent
           className={"monters-search-box"}
           onSearchHandler={onSearchChange}
